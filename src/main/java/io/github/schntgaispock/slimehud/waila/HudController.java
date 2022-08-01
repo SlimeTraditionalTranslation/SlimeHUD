@@ -65,7 +65,7 @@ public class HudController {
 
         Network en = EnergyNet.getNetworkFromLocation(request.getLocation());
         int size = getNetworkSize(en);
-        return size < 0 ? "" : "&7| Network Size: " + HudBuilder.getCommaNumber(size);
+        return size < 0 ? "" : "&7| 網路大小: " + HudBuilder.getCommaNumber(size);
     }
 
     @Nonnull
@@ -97,7 +97,7 @@ public class HudController {
         MachineOperation operation = machine.getMachineProcessor().getOperation(request.getLocation());
 
         if (operation == null) {
-            return "&7| Idle";
+            return "&7| 空閒";
         }
 
         int progress = operation.getProgress();
@@ -116,7 +116,7 @@ public class HudController {
         if (generation > 0) {
             return HudBuilder.formatEnergyGenerated(generation);
         } else {
-            return "&7| Not generating";
+            return "&7| 未發電";
         }
     }
 
@@ -132,7 +132,7 @@ public class HudController {
         if (generation > 0) {
             return HudBuilder.formatEnergyGenerated(generation);
         } else {
-            return "&7| Not generating";
+            return "&7| 未發電";
         }
     }
 
@@ -143,7 +143,7 @@ public class HudController {
         }
         CargoNode cn = (CargoNode) request.getSlimefunItem();
         int channel = cn.getSelectedChannel(request.getLocation().getBlock()) + 1;
-        return "&7| Channel: " + Util.getColorFromCargoChannel(channel).toString() + channel;
+        return "&7| 頻道: " + Util.getColorFromCargoChannel(channel).toString() + channel;
     }
 
     @Nonnull
@@ -154,7 +154,7 @@ public class HudController {
         Network cn = CargoNet.getNetworkFromLocation(request.getLocation());
 
         int size = getNetworkSize(cn);
-        return size < 0 ? "" : "&7| Network Size: " + HudBuilder.getCommaNumber(size);
+        return size < 0 ? "" : "&7| 網路大小: " + HudBuilder.getCommaNumber(size);
     }
 
     private int getNetworkSize(Network network) {

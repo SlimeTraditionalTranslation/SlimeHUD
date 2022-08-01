@@ -4,8 +4,8 @@ package io.github.schntgaispock.slimehud;
 import javax.annotation.Nonnull;
 
 import io.github.schntgaispock.slimehud.waila.HudController;
-import org.bstats.bukkit.Metrics;
-import org.bstats.charts.SimplePie;
+//import org.bstats.bukkit.Metrics;
+//import org.bstats.charts.SimplePie;
 import org.bukkit.NamespacedKey;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
@@ -33,7 +33,7 @@ public class SlimeHUD extends AbstractAddon {
         getLogger().info("#          Version: 1.2.0         #");
         getLogger().info("#=================================#");
 
-        Metrics metrics = new Metrics(this, 15883);
+        /*Metrics metrics = new Metrics(this, 15883);
         metrics.addCustomChart(
             new SimplePie("disabled", () -> {
                 return "" + getConfig().getBoolean("waila.disabled");
@@ -43,7 +43,7 @@ public class SlimeHUD extends AbstractAddon {
             new SimplePie("waila_location", () -> {
                 return getConfig().getString("waila.location");
             })
-        );
+        );*/
 
         playerData = new AddonConfig("player.yml");
 

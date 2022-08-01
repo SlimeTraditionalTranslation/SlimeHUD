@@ -19,7 +19,7 @@ public class HudBuilder {
      * @return The formatted text
      */
     public static String formatEnergyStored(int energy) {
-        return "&7| " + HudBuilder.getAbbreviatedNumber(energy) + " J Stored";
+        return "&7| " + HudBuilder.getAbbreviatedNumber(energy) + " J 儲存";
     }
 
     /**
